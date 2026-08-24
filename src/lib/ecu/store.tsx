@@ -55,7 +55,7 @@ const HEX = "0123456789ABCDEF";
 function randHex(bytes: number) {
   let out = "";
   for (let i = 0; i < bytes; i++) {
-    out += HEX[Math.floor(Math.random() * 16)] + HEX[Math.floor(Math.random() * 16)] + " ";
+    out += `${HEX[Math.floor(Math.random() * 16)] ?? "0"}${HEX[Math.floor(Math.random() * 16)] ?? "0"} `;
   }
   return out.trim();
 }
